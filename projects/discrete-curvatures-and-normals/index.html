@@ -121,10 +121,9 @@
 			io.add(guiFields, "Export Mesh");
 			io.open();
 
-			gui.add(guiFields, "Normals", ["Equally Weighted", "Tip Angle Weighted", "Sphere Inscribed",
-				"Area Weighted (AN)", "Mean Curvature (HN)", "Gauss Curvature (KN)"
-			]).onChange(updateNormals).listen();
-			gui.add(guiFields, "Plot", ["Shaded", "A", "H", "K", "κ max", "κ min"]).onChange(updatePlot).listen();
+			gui.add(guiFields, "Normals", ["Equally Weighted",
+				"Area Weighted (AN)", "Mean Curvature (HN)"]).onChange(updateNormals).listen();
+			gui.add(guiFields, "Plot", ["Shaded", "H", "K"]).onChange(updatePlot).listen();
 			gui.add(guiFields, "Show Normals").onChange(toggleNormals).listen();
 			gui.add(guiFields, "Show Wireframe").onChange(toggleWireframe).listen();
 		}
