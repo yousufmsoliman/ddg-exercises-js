@@ -30,6 +30,7 @@ describe("SpectralConformalParameterization", function() {
 
 			let EC_sol = loadConformalEnergyMatrix();
 			let EC = spectralConformalParameterization.buildConformalEnergy();
+			EC.scaleBy(new Complex(0.5));
 
 			chai.assert.strictEqual(EC_sol.minus(EC).frobeniusNorm() < 1e-6, true);
 			memoryManager.deleteExcept([]);
